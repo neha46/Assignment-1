@@ -29,7 +29,7 @@ const IdentityForm = ({ setGuestDetails, guestDetails }) => {
             Id Number:
           </label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             id="IdNumber"
             name="IdNumber"

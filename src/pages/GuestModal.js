@@ -17,15 +17,12 @@ const GuestModal = ({
   return (
     <div>
       <div className="col-12 flex justify-center">
-        {/* Bootstrap Modal */}
-        <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal  show={showModal} onHide={handleCloseModal} dialogClassName="custom-modal">
           <Modal.Header closeButton>
             <Modal.Title>Complete Guest Details</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="p-3 ">
-              <h2 className="mt-4">Guest Information:</h2>
-
               {showModal && (
                 <>
                   <GuestDetails

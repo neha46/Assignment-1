@@ -34,4 +34,5 @@ h3{
 input:hover{
   border: 1px solid gray !important;
 
-}
+}.custom-modal {
+  max-width: 800px !important; }

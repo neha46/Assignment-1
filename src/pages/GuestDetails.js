@@ -1,4 +1,5 @@
 import React from "react";
+import CCS from "./CCS";
 
 const GuestDetails = ({
   formData,
@@ -24,7 +25,9 @@ const GuestDetails = ({
   return (
     <div>
       <div className="row g-3 p-3">
-        <div className="col-md-6">
+          <h2>Guest Details:</h2>
+        <div className="col-md-3">
+         
           <label htmlFor="guestName" className="form-label">
             Guest Name:
           </label>
@@ -38,7 +41,7 @@ const GuestDetails = ({
             required
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-3">
           <label htmlFor="fullName" className="form-label">
             Full Name:
           </label>
@@ -52,12 +55,12 @@ const GuestDetails = ({
             required
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-3">
           <label htmlFor="mobile" className="form-label">
             Mobile:
           </label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             id="mobile"
             name="mobile"
@@ -66,7 +69,7 @@ const GuestDetails = ({
             required
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-3">
           <label htmlFor="email" className="form-label">
             Email:
           </label>
@@ -80,51 +83,12 @@ const GuestDetails = ({
             required
           />
         </div>
-        <div className="col-md-6">
-          <label htmlFor="city" className="form-label">
-            City:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="city"
-            name="city"
-            onChange={handleGuestDetailsChange}
-            value={guestDetails.city}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="state" className="form-label">
-            State:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="state"
-            name="state"
-            onChange={handleGuestDetailsChange}
-            value={guestDetails.state}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="country" className="form-label">
-            Country:
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="country"
-            name="country"
-            onChange={handleGuestDetailsChange}
-            value={guestDetails.country}
-            required
-          />
-        </div>
+        {/* component for country and state, city */}
+         <CCS/>
+        
         {showModal && (
-          <div className="col-md-6">
-            <label htmlFor="genderType" className="form-label mt-3">
+          <div className="col-md-3">
+            <label htmlFor="genderType" className="form-label">
               gender :
             </label>
             <select
@@ -132,8 +96,7 @@ const GuestDetails = ({
               className="form-select"
               name="genderType"
               onChange={handleChange}
-              required
-            >
+              required >
               <option value="default">default</option>
               <option value="female">female</option>
               <option value="male">male</option>
